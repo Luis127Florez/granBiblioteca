@@ -1,0 +1,46 @@
+<%- include('../layouts/cabecera.ejs') -%>
+
+<div class="container">
+    <br>
+        <a href="/rutasLibros/crear" class="btn btn-primary" type="button">Insertar en tabla</a>
+        <br>
+        <br>
+        <table class="table table-dark">
+            <thead class="thead-light">
+                <tr>
+                    <th>#</th>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Imagen</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% for( let i = 0; i < libros.length; i++ ) { %>
+                    <tr>
+                        <td></td>
+                        <td><%= libros[i].id%></td>
+                        <td><%= libros[i].nombre%></td>
+                        <td> <img src="/images/<%= libros[i].img%>" alt="" width="70px" height="90px"></td>
+                        <td>
+                        
+                        <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
+                            <form class="form-inline" method="get" action="/rutasLibros/editar/<%= libros[i].id%>">
+                                <button class="btn btn-success" type="submit">Editar</button>
+                            </form>
+                        </div> / 
+                            
+                            <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
+                                <form class="form-inline" method="post" action="/rutasLibros/eliminar/<%= libros[i].id%>">
+                                    <button class="btn btn-danger" type="submit">Eliminar</button>
+                                </form>
+                            </div>
+                        </td>
+                    </tr>
+                <% } %> 
+            </tbody>
+        </table> 
+</div>
+        
+
+<%- include('../layouts/pie.ejs') -%> 

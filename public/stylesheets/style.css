@@ -1,0 +1,79 @@
+body, html{
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  width: 100%;
+  height: 100%;
+}
+
+a {
+  color: #00B7FF;
+}
+nav {
+  height: 6%;
+}
+.cont{
+  width: 100%;
+  height: 100%;
+}
+#padremenu{
+  width: 100%;
+  height: 100%;
+  display: grid;
+ grid-template-rows: 15% 85%; 
+}
+#global{
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+#global{
+  background: #2929e9;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #91e7ff, #2929e9); 
+  background: linear-gradient(to right, #91e7ff, #2929e9);
+}
+#desc{
+  display: grid;
+  grid-template-rows: 1fr 3fr;
+
+}
+#texto1{
+
+ display: flex;
+
+ align-items: center;
+ flex-direction: column;
+}
+#texto1 p{
+  width: 30%;
+}
+#tarjeta{
+display: grid;
+grid-template-columns: 1fr 3fr 1fr;
+}
+/* #left{
+} */
+#center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+
+}
+#center .card{
+  margin: 2%;
+ 
+}
+/* #right{
+
+} */
+
+footer{
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  background-color: #d7d7d7;
+}
+footer p{
+  width: 55%;
+}
